@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './styless.css'
 import axios from 'axios'
+import { BsFillInfoCircleFill } from 'react-icons/bs'
 
 const App = () => {
 
@@ -161,7 +162,7 @@ const App = () => {
           <div id='btn-wrapper'>
             <button type='submit' onClick={converter}>CONVERTER</button>
           </div>
-          <p><span id='info-icon'>!</span> Data da última cotação disponível: <span id='data-info'>{inputInfo.dataCotacao}</span> </p>
+          <p id='info-p'><span id='info-icon'><BsFillInfoCircleFill /></span> Data da última cotação disponível: <span id='data-info'>{inputInfo.dataCotacao}</span> </p>
         </form>
         <img src='./logotipo.png' alt='logotipo-left' id={converted === false ? 'logotipo-left-hide' : 'logotipo-left-show'}></img>
       </div>
