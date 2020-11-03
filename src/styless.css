@@ -4,6 +4,27 @@
   padding: 0px;
 }
 
+:root {
+  --main-color-bg: rgb(17, 17, 17);
+  --second-color-bg: rgb(197, 237, 194);
+}
+
+::-webkit-input-placeholder {
+  color: rgb(181, 177, 177);
+}
+
+:-moz-placeholder {
+  color: rgb(181, 177, 177);
+}
+
+::-moz-placeholder {
+  color: rgb(181, 177, 177);
+}
+
+:-ms-input-placeholder {
+  color: gray;
+}
+
 div#container-app {
   width: 100%;
   height: 100vh;
@@ -21,7 +42,7 @@ div#container-app {
 }
 
 .wrapper-app p {
-  color: rgb(255, 111, 0);
+  color: var(--second-color-bg);
   width: 50%;
   min-width: 250px;
   margin: 1rem auto 0rem auto;
@@ -61,7 +82,7 @@ div#container-app {
   margin-top: 1rem;
   outline: none;
   border: none;
-  background: rgb(255, 111, 0);
+  background: rgb(88, 177, 81);
   color: white;
   font-weight: bold;
   transition: background 0.3s, color 0.3s;
@@ -69,25 +90,25 @@ div#container-app {
 }
 
 #btn-wrapper button:hover {
-  background: white;
-  color: rgb(255, 111, 0);
+  background: rgb(63, 135, 58);
+  color: white;
   cursor: pointer;
 }
 
 #first-element {
   width: 100%;
-  background: rgb(17, 17, 17);
+  background: var(--main-color-bg);
   transition: 1s;
 }
 
 #first-element-after {
   width: 100%;
-  background: rgb(17, 17, 17);
+  background: var(--main-color-bg);
   transition: 1s;
 }
 
 #second-element {
-  background: rgb(255, 111, 0);
+  background: var(--second-color-bg);
   width: 100%;
   height: 30%;
   position: relative;
@@ -95,7 +116,7 @@ div#container-app {
 }
 
 #second-element-after {
-  background: rgb(255, 111, 0);
+  background: var(--second-color-bg);
   width: 100%;
   height: 100%;
   position: relative;
@@ -107,7 +128,7 @@ div#container-app {
   width: 50%;
   min-width: 250px;
   margin: 1rem auto;
-  color: rgb(255, 111, 0);
+  color: var(--second-color-bg);
 }
 
 .span-input-div {
@@ -125,7 +146,7 @@ div#container-app {
   outline: none;
   border: none;
   font-size: 1.5rem;
-  background: rgb(255, 111, 0);
+  background: var(--second-color-bg);
   text-align: center;
   display: flex;
   align-items: center;
@@ -146,7 +167,7 @@ div#container-app {
 }
 
 .input-element:focus {
-  box-shadow: 1px 2px 3px rgb(255, 111, 0), -1px -2px 3px rgb(255, 111, 0);
+  box-shadow: 1px 2px 3px var(--second-color-bg), -1px -2px 3px var(--second-color-bg);
   outline: none;
   border: none;
 }
@@ -181,30 +202,30 @@ div#container-app {
   width: 90%;
   text-align: center;
   color: white;
-  transform: translateX(-110%);
+  transform: translateY(110%);
   opacity: 0;
   transition: 1s;
 }
 
 #result-info span {
-  color: rgb(255, 111, 0);
+  color: var(--second-color-bg);
   font-weight: bold;
 }
 
 #result-info-after {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 2rem;
   top: 0;
   width: 90%;
   text-align: center;
-  color: white;
-  transform: translateX(0%);
+  color: black;
+  transform: translateY(0%);
   opacity: 1;
   transition: 1s;
 }
 
 #result-info-after span {
-  color: rgb(17, 17, 17);
+  color: rgb(26, 123, 17);
   font-weight: bold;
 }
 
@@ -218,18 +239,23 @@ div#container-app {
 }
 
 #reconvert-btn-after {
+  width: 25%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
   border: none;
-  background: none;
+  background: rgb(88, 177, 81);
   font-size: 1rem;
   outline: none;
-  color: blue;
+  color: white;
   opacity: 1;
-  transition: 1s;
+  transition: background 0.3s, opacity 1s;
 }
 
 #reconvert-btn-after:hover {
   cursor: pointer;
-  text-decoration: underline;
+  background: rgb(63, 135, 58);
+  color: white;
 }
 
 #logotipo-right-show {
@@ -278,12 +304,12 @@ div#container-app {
   }
 
   #first-element-after {
-    background: rgb(255, 111, 0);
+    background: var(--second-color-bg);
     width: 90%;
   }
 
   #second-element-after {
-    background: rgb(17, 17, 17);
+    background: var(--main-color-bg);
   }
 
   .wrapper-app .error-message {
@@ -307,12 +333,18 @@ div#container-app {
     width: 400px;
   }
 
+  #result-info {
+    transform: translateX(-110%);
+  }
+
   #result-info-after {
     top: 24%;
     font-size: 3rem;
+    color: white;
+    transform: translateX(0%);
   }
 
   #result-info-after span {
-    color: rgb(255, 111, 0);
+    color: var(--second-color-bg);
   }
 }

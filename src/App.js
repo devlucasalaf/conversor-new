@@ -168,8 +168,8 @@ const App = () => {
       </div>
       <div className='wrapper-app' id={converted === false ? 'second-element' : 'second-element-after'}>
         <img src='./logotipo.png' alt='logotipo-right' id={converted === false ? 'logotipo-right-show' : 'logotipo-right-hide'}></img>
-        <p id={converted === false ? 'result-info' : 'result-info-after'} > Resultado da Conversão: <br /> <span> R$ {resultInfo()}</span></p>
-        <button id={converted === false ? 'reconvert-btn' : 'reconvert-btn-after'} onClick={converter}>Refazer conversão</button>
+        <p id={converted === false ? 'result-info' : 'result-info-after'} ><b> $ {inputInfo.quantidade}</b> dólares na cotação de <b>$ {inputInfo.cotacao} </b> é igual a: <br /> <span> R$ {resultInfo()}</span></p>
+        <button id={converted === false ? 'reconvert-btn' : 'reconvert-btn-after'} onClick={converter}>VOLTAR</button>
       </div>
 
     </div >
